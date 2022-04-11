@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, ElementRef} from '@angular/core';
 import { timer, Observable } from 'rxjs';
 import { ActivatedRoute, Params } from '@angular/router';
 
@@ -17,7 +17,6 @@ export class AppComponent {
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
-    'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red', 
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
@@ -29,7 +28,8 @@ export class AppComponent {
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
-    'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red', 
+    'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
+    'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
     'violet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red',
@@ -47,14 +47,14 @@ export class AppComponent {
 
   constructor(private activatedRoute : ActivatedRoute) {
     this.source.subscribe((val: number) => {
-         this.colorSelected = this.colors[val];                    
+         this.colorSelected = this.colors[val];
   });
    this.activatedRoute.queryParams.subscribe((params: Params) => {
 
     // console.log(params);
-    
+
     if(params['who']) {
-        let names : string[] = String(params['who']).split(' '); 
+        let names : string[] = String(params['who']).split(' ');
         names.map((name, index, array) => {
           array[index] = name.replace(name.slice(0, 1), name.charAt(0).toUpperCase())
         });
@@ -67,4 +67,11 @@ export class AppComponent {
 
   }
 
+  onClick() {
+    if(document.getElementById("code").value == '1111') {
+      alert('Du hast das Rätzel gelöst, guck unter deine Handyhülle :)');
+    } else {
+      alert('Falscher code Lembda, versuch es noch einmal :)');
+    }
+  }
 }

@@ -2,14 +2,14 @@
 
 @font-face {
     font-family: llcalig;
-    src: url(./assets/fonts/lcallig.TTF);
+    src: url(./assets/fonts/Raleway-Italic.ttf);
     font-style: italic;
     font-weight: bolder;
 }
 body {
     background-color: #f7f1e3;
     margin: 10px;
-      
+
 }
 button{
     font-family:llcalig;
@@ -18,13 +18,13 @@ h2 {
 
     font-family: llcalig;
     text-align: center;
-    
+
 }
 #h1 {
 
     font-family: llcalig;
     text-align: center;
-    
+
 }
 #img {
     border: 2px solid black;
@@ -43,7 +43,7 @@ footer{
     font-family: llcalig;
     position:fixed;
     bottom:0;
-    width: 100%;             
+    width: 100%;
 }
 /* screen < 600px width */
 @media only screen and (max-width: 600px) {
