@@ -68,7 +68,8 @@ export class AppComponent {
   }
 
   onClick() {
-    if(document.getElementById("code").value == '1111') {
+    var inputValue = (<HTMLInputElement>document.getElementById("code")).value;
+    if( inputValue == '1111') {
       alert('Du hast das Rätzel gelöst, guck unter deine Handyhülle :)');
     } else {
       alert('Falscher code Lembda, versuch es noch einmal :)');
